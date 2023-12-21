@@ -1,22 +1,36 @@
-import classnames from "classnames"
-import { MouseEventHandler, ReactNode } from "react"
-import "./style.scss"
+import classnames from 'classnames';
+import { ComponentPropsWithoutRef, MouseEventHandler, ReactNode } from 'react';
 
-type ButtonProps = {
-  title: string
-  icon?: ReactNode
-  outline?: boolean
-  disabled?: boolean
-  onClick: MouseEventHandler<HTMLButtonElement>
+import './style.scss';
+
+interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
+  title: string;
+  icon?: ReactNode;
+  outline?: boolean;
+  disabled?: boolean;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({ title, icon, outline, disabled, onClick }: ButtonProps) => {
+const Button = ({
+  title,
+  icon,
+  outline,
+  disabled,
+  onClick,
+  className,
+  ...props
+}: ButtonProps) => {
   return (
-    <button className={classnames(outline && "outline", "button")} onClick={onClick} disabled={disabled}>
+    <button
+      {...props}
+      className={classnames(outline && 'outline', 'button', className)}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {icon && <span className="icon">{icon}</span>}
       {title}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

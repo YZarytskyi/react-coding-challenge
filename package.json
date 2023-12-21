@@ -3,20 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.16",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@reduxjs/toolkit": "^2.0.1",
     "classnames": "^2.3.2",
     "json-server": "^0.17.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
     "react-scripts": "5.0.1",
     "sass": "^1.59.3",
     "typescript": "^4.9.5",
+    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,5 +39,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "@types/uuid": "^9.0.7",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.16",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11"
   }
 }

@@ -6,6 +6,7 @@
     font-size: 22px;
     font-weight: 700;
     color: #121212;
+    text-transform: capitalize;
     margin-bottom: 30px;
   }
 }
@@ -62,4 +63,8 @@
       color: $white;
     }
   }
+}
+
+.submit-btn {
+  text-transform: capitalize;
 }

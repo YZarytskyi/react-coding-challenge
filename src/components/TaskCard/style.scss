@@ -3,7 +3,7 @@
 
 .task-card {
   background: $white;
-  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
+  box-shadow: 0 6px 58px rgba(196, 203, 214, 0.103611);
   border-radius: 24px;
   padding: 22px 30px;
   display: flex;
@@ -12,7 +12,18 @@
   margin-top: 15px;
   @include breakpoints.devices(sm) {
     flex-direction: column;
+    row-gap: 20px;
     align-items: flex-start;
+  }
+}
+
+.task-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  @include breakpoints.devices(sm) {
+    width: 100%;
   }
 }
 
@@ -28,6 +39,28 @@
   font-weight: 400;
   line-height: 1.2;
   color: $primary-color;
+}
+
+.task-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  @include breakpoints.devices(sm) {
+    width: 100%;
+    justify-content: space-between;
+  gap: 15px;
+  }
+}
+
+
+.task-status-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  @include breakpoints.devices(sm) {
+  gap: 15px;
+    justify-content: space-between;
+  }
 }
 
 .priority-title {
@@ -46,12 +79,15 @@
   color: $success-color;
   text-transform: capitalize;
 }
+
 .high-priority {
   color: $error-color;
 }
+
 .medium-priority {
   color: $warning-color;
 }
+
 .low-priority {
   color: $success-color;
 }
@@ -60,6 +96,7 @@
   width: 100px;
   text-align: center;
   @include breakpoints.devices(sm) {
+    width: fit-content;
     margin-top: 15px;
     text-align: left;
   }
